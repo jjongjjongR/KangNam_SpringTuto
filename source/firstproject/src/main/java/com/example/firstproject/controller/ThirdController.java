@@ -23,4 +23,16 @@ public class ThirdController {
 
         return html;
     }
+
+    @GetMapping("/user/{username}/orders/{orderNo}")
+    @ResponseBody
+    public String getOrder(@PathVariable String username, @PathVariable int orderNo){
+        return "User Name: " + username + ", Order No: " + orderNo;
+    }
+
+    @GetMapping("/posts/{category}/{postId}")
+    @ResponseBody
+    public String getPostDetails(@PathVariable String category, @PathVariable int postId){
+        return "Category: " + category + ", Post Id: " + postId;
+    }
 }
