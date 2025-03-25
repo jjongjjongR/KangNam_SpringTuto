@@ -1,0 +1,9 @@
+<h1>Welcome</h1>
+<!--조건-->
+
+{{#logedIn}}
+    <p>Hello, {{username}}! You're logged in.</p>
+{{/logedIn}}
+{{^logedIn}}
+    <p>You are not logged in. Please log in.</p>
+{{/logedIn}}
