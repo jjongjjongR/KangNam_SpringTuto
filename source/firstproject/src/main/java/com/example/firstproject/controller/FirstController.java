@@ -13,6 +13,7 @@ public class FirstController {
         return "greetings";     //greetings 라는 이름을 가진 뷰를 리턴
     }
 
+
     @GetMapping("/bye")
     public  String goodBye(Model model){ //GetMapping이 알아서 해주기 때문에 goodBye는 뭘 해도 의미 없음.
         model.addAttribute("username", "조정석");

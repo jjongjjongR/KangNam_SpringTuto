@@ -20,9 +20,9 @@ public class ExampleController {
     //object ex
     @GetMapping("/objectex")
     @ResponseBody
-    public String person(Model model) {
-        Person person = new Person("아이유", 25, "서울특별시");
-        model.addAttribute("person",person);
+    public String person(Model model){
+        Person person = new Person("아이유",25,"서울시");
+        model.addAttribute("person", person);
         return "objectex";
     }
 
@@ -36,18 +36,16 @@ public class ExampleController {
     }
 
     @GetMapping("/loopex")
-    public String getPersionList(Model model){
-        String[] fruits = {"apple", "banana", "orange"};
-
+    public String loopex(Model model) {
+        String[] fruits = {"banana","apple","tomatp"};
         List<Person> persons = Arrays.asList(
-                new Person("아이유", 25, "서울"),
-                new Person("유재석", 50, "부산"),
-                new Person("안세영", 20, "광주")
+                new Person("아이유",25,"서울"),
+                new Person ("안세영", 20, "광주"),
+                new Person("유재석", 50, "부산")
         );
+          model.addAttribute("fruits", fruits);
+          model.addAttribute("persons",persons);
 
-        model.addAttribute("fruits", fruits);
-        model.addAttribute("persons",persons);
-
-        return "loopex";
+          return "loppex";
     }
 }
