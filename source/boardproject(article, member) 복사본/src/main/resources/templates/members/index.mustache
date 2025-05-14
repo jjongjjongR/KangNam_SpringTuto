@@ -1,0 +1,18 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <th>Id</th><th>email</th>
+    </thead>
+    <tbody>
+    {{#members}}
+    <tr>
+        <th> {{id}} </th>
+        <td> <a href="/members/{{id}}"> {{email}} </a> </td>
+        <td> {{password}} </td>
+    </tr>
+    {{/members}}
+    </tbody>
+</table>
+<a href="/signup">회원가입</a>
+{{>layouts/footer}}
